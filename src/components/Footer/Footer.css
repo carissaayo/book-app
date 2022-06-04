@@ -1,5 +1,6 @@
 .footer{
     display: flex;
-    position: sticky;
-    bottom:-10px;
+    justify-content: space-between;
+    position: relative;
+    bottom:-20px;
 }
