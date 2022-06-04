@@ -3,5 +3,7 @@
     grid-template-columns: 1fr 4fr;
     /* grid-template-rows: 1fr; */
     column-gap: 50px;
-    height:100vh;
+    /* height:100vh; */
+    background-color: rgb(238, 238, 238);
+    
 }

@@ -1,8 +1,8 @@
 import User from "../User/User"
-
+import "./UsersList.css"
 const UsersList = () => {
   return (
-    <div>
+    <div className="userslist">
       <User />
       <User />
       <User />

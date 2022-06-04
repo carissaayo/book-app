@@ -1,0 +1,62 @@
+.user{
+    width: 230px;
+    height: 224px;
+    border-radius: 20px;
+    background-color: white;
+
+}
+
+.user__img__con{
+    border-radius: inherit;
+    position: relative;
+    margin-bottom: 20px;
+}
+
+.user__cover__img{
+ width: 230px;
+ height:139px;
+    border-radius: inherit;
+/* opacity: 0.9; */
+
+}
+
+
+ .user__img{
+    width:40px;
+    border-radius: 50%;
+    position:absolute;
+    left:5%;
+    bottom:-10px;
+}
+
+.user__like__con{
+    background-color: #BBBBBB;
+;
+}
+
+.user__details{
+    display: flex;
+    justify-content: space-between;
+    padding: 0 7%;
+}
+
+.user__details div:first-child{
+    flex-grow: 0.7;
+}
+
+.user__price{
+    color: #0000007D;
+    font-size: 0.9rem;
+
+}
+
+.user__button__con{
+    padding-top: 6px;
+}
+
+.user__button{
+    color:#1D9BF0;
+    border:none;
+    background-color: transparent;
+    cursor: pointer;
+}
