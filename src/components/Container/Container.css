@@ -5,6 +5,8 @@
     position: relative;
     padding-left: 20px;
     padding-right: 10%;
+    overflow-y: scroll;
+
     /* height: 100vh; */
 }
 
