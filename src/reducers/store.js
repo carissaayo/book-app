@@ -3,6 +3,6 @@ import jobsReducer from "../context/jobsContext";
 
 export const store = configureStore({
   reducer: {
-    giphy: jobsReducer,
+    jobs: jobsReducer,
   },
 });

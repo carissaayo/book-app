@@ -2,9 +2,9 @@ import { createSlice, createAsyncThunk } from "@reduxjs/toolkit";
 import axios from "axios";
 
 const initialState = {
-  isLoading: false,
-  isError: false,
+ 
   data: [],
+  favoriteList:[],
   pending: false,
   error: false,
 };
@@ -23,9 +23,17 @@ export const jobsSlice = createSlice({
   reducers: {
     getJobs: async (state, action) => {
       state.data = action.payload;
-      state.isError = false;
-      state.isLoading = false;
+      state.pending = false;
+      state.error = false;
+      
     },
+    addToFavorite:(state,action)=>{
+        state.favoriteList = [...state.favoriteList,action.payload]
+    },
+    removeFromFavorite:(state,action)=>{
+        let  newList = state.favoriteList.filter(item=> item.id !== action.payload.id )
+        state.favoriteList =newList
+    }
   },
   extraReducers: {
     [fetchJobs.pending]: (state) => {
@@ -45,6 +53,6 @@ export const jobsSlice = createSlice({
 });
 
 // Action creators are generated for each case reducer function
-export const { getJobs } = jobsSlice.actions;
+export const { getJobs,addToFavorite,removeFromFavorite } = jobsSlice.actions;
 
 export default jobsSlice.reducer;

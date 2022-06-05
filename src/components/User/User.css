@@ -3,6 +3,8 @@
     height: 224px;
     border-radius: 20px;
     background-color: white;
+    position: relative;
+    /* pointer-events none   ; */
 
 }
 
@@ -30,8 +32,32 @@
 }
 
 .user__like__con{
+    height: 25px;
+    width:25px;
     background-color: #BBBBBB;
-;
+  border-radius: 10px;
+    position: absolute;
+    right:10px;
+    top:5px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color:white;
+    z-index: 20;
+    cursor: pointer;
+}
+
+.user__like__con.liked{
+    background-color: white;
+    color:red;
+}
+.liked{
+
+}
+.user__like_btn{
+    border:none;
+    background-color: transparent;
+
 }
 
 .user__details{
