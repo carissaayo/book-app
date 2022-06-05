@@ -1,15 +1,17 @@
 import { useEffect } from "react";
-import Container from "./components/Container/Container";
-import Sidebar from "./components/Sidebar/Sidebar";
-import { fetchGiphy } from "./context/giphyContext";
+import {  fetchJobs } from "./context/jobsContext";
 import { useDispatch } from "react-redux";
 import { Route, Routes } from "react-router-dom";
-
-import "./App.css";
 import Favorite from "./pages/Favorite/Favorite";
 import Home from "./pages/Home/Home";
+import "./App.css";
 
 function App() {
+  let dispatch = useDispatch();
+    
+   useEffect(() => {
+     dispatch(fetchJobs());
+   }, []);
   return (
     <div className="App">
       <Routes>
