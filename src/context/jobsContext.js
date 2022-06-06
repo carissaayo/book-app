@@ -60,8 +60,13 @@ export const jobsSlice = createSlice({
       state.error = false;
     },
     addToFavorite: (state, action) => {
-      if (state.favoriteList.includes(action.payload)) return;
-      state.favoriteList = [...state.favoriteList, action.payload];
+      console.log(action.payload.cust_id);
+      if (state.favoriteList.indexOf(action.payload)===true){ 
+        return 
+      }else{
+
+         state.favoriteList = [...state.favoriteList, action.payload];
+      }
       console.log(state.favoriteList);
     },
     removeFromFavorite: (state, action) => {

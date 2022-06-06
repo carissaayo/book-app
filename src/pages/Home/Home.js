@@ -12,9 +12,12 @@ const { error, pending, data } = jobsState;
   return (
     <>
     <div className="home">
-      <Sidebar />
-      
-      {<Container />}
+     {data&& (
+     <>
+     <Sidebar />
+     
+      <Container />
+      </>)}
     </div>
     </>
   );

@@ -14,12 +14,12 @@ const User = ({newItem}) => {
   let jobsState = useSelector((state) => state.jobs);
 
   const { favoriteList,singleCurrency } = jobsState;
-  console.log(singleCurrency);
+  
 
 useEffect(() => {
   localStorage.setItem("favorite",JSON.stringify(favoriteList))
 
-}, [isLiked])
+}, [isLiked,favoriteList])
 
   return (
     <section className="user">
