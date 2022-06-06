@@ -1,0 +1,22 @@
+.converter{
+ width:200px;
+ display: flex;
+ justify-content: space-around;
+ align-items: center;
+ background-color: white;
+ border:1px solid #8692A6;
+ border-radius: 4px;
+}
+
+.converter select{
+    width:120px;
+    border:1px solid #8692A6;
+    padding:10px;
+    border:none;
+    z-index: 20;
+}
+
+.converter img{
+    height:20px;
+
+}

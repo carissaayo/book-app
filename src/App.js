@@ -1,17 +1,28 @@
 import { useEffect } from "react";
-import {  fetchJobs } from "./context/jobsContext";
-import { useDispatch } from "react-redux";
+import {  fetchJobs ,fetchCurrencies} from "./context/jobsContext";
+import { useDispatch, useSelector } from "react-redux";
 import { Route, Routes } from "react-router-dom";
 import Favorite from "./pages/Favorite/Favorite";
 import Home from "./pages/Home/Home";
 import "./App.css";
 
 function App() {
+  let jobsState = useSelector((state) => state.jobs);
+  const {currencies } = jobsState;
   let dispatch = useDispatch();
-  
+
     
    useEffect(() => {
-     dispatch(fetchJobs());
+     try {
+       dispatch(fetchJobs());
+       dispatch(fetchCurrencies());
+       
+       
+     } catch (error) {
+       console.log(error);
+     }
+     
+    
    }, []);
   return (
     <div className="App">
@@ -19,6 +30,7 @@ function App() {
         <Route path="/" element={<Home />} />
         <Route path="/favorite" element={<Favorite />} />
       </Routes>
+      {/* <Home /> */}
     </div>
   );
 }

@@ -4,14 +4,14 @@ import "./UsersList.css";
 const UsersList = ({}) => {
   let jobsState = useSelector((state) => state.jobs);
 
-  const { data, error, pending } = jobsState;
+  const { data } = jobsState;
   return (
     <div className="userslist">
       {data &&
         data.map((item) => {
           const {
-            cust_id,
             avatar,
+            cust_id,
             display_name,
             starting_from,
             service_photo,
@@ -25,14 +25,6 @@ const UsersList = ({}) => {
           };
           return <User newItem={newItem && newItem} key={cust_id} />;
         })}
-      {/* <User />
-      <User />
-      <User />
-      <User />
-      <User />
-      <User />
-      <User />
-      <User /> */}
     </div>
   );
 };
