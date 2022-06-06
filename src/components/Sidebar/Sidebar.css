@@ -2,7 +2,7 @@
     padding-top: 20px;
     border-right: 1px solid  #0000006E;
 position:sticky;
-    /* height: 100vh; */
+    
     color: #14142B;
 }
 .sidebar__logo{
@@ -36,4 +36,13 @@ color:#333
 
 .sidebar__nav a:active{
     color: black;
+}
+
+@media(max-width:830px){
+    .sidebar__logo{
+        padding-left: 5%;
+    }
+    .sidebar__nav{
+        padding-left: 40px;
+    }
 }
