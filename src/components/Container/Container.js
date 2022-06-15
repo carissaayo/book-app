@@ -1,24 +1,21 @@
-import UsersList from "../UserList/UsersList";
-import Footer from "../Footer/Footer";
+import BooksList from "../BooksList/BooksList";
 import "./Container.css";
 import { useSelector } from "react-redux";
-const Container = ({}) => {
-  let jobsState = useSelector((state) => state.jobs);
-  const { data, error, pending } = jobsState;
+const Container = () => {
+  let booksState = useSelector((state) => state.books);
+  const { data } = booksState;
 
   return (
     <div className="container">
-      <h1>Hire Top Developers</h1>
+      <h1>Top Selling Books</h1>
 
       {data.length > 0 ? (
-        <UsersList />
+        <BooksList />
       ) : (
         <div className="loading">
           <h2>Loading ...</h2>
         </div>
       )}
-
-      <Footer />
     </div>
   );
 };

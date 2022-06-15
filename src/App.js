@@ -1,36 +1,31 @@
 import { useEffect } from "react";
-import {  fetchJobs ,fetchCurrencies} from "./context/jobsContext";
 import { useDispatch, useSelector } from "react-redux";
 import { Route, Routes } from "react-router-dom";
-import Favorite from "./pages/Favorite/Favorite";
 import Home from "./pages/Home/Home";
-import "./App.css";
+import SingleBook from "./pages/SingleBook/SingleBook";
 
+import "./App.css";
+import dummyData from "./data/dummyData"
+import Admin from "./pages/Admin/Admin";
+import AddBook from "./pages/AddBook/AddBook";
 function App() {
-  let jobsState = useSelector((state) => state.jobs);
-  const {currencies } = jobsState;
+  let booksState = useSelector((state) => state.books);
+  // const { } = booksState;
   let dispatch = useDispatch();
+  
 
     
    useEffect(() => {
-     try {
-       dispatch(fetchJobs());
-       dispatch(fetchCurrencies());
-       
-       
-     } catch (error) {
-       console.log(error);
-     }
-     
-    
+    localStorage.setItem("data",JSON.stringify(dummyData))
    }, []);
   return (
     <div className="App">
       <Routes>
         <Route path="/" element={<Home />} />
-        <Route path="/favorite" element={<Favorite />} />
+        <Route path="/books/:id" element={<SingleBook />} />
+        <Route path="/admin" element={<Admin />} />
+        <Route path="/add-book" element={<AddBook />} />
       </Routes>
-      {/* <Home /> */}
     </div>
   );
 }

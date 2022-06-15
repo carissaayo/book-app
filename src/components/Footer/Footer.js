@@ -1,10 +1,13 @@
-import Converter from '../Converter/Converter';
+import { Link } from "react-router-dom";
 import "./Footer.css"
+
 const Footer = () => {
   return (
-    <div className='footer'>
-        <p>©2022 DevHire</p>
-      <Converter />
+    <div className="footer">
+      <div></div>
+      <p>
+        <Link to={"/admin"}>Manage Books</Link>
+      </p>
     </div>
   );
 }

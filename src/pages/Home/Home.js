@@ -1,24 +1,24 @@
 import React from 'react'
 import Container from "../../components/Container/Container";
-import Sidebar from "../../components/Sidebar/Sidebar";
 import { useSelector } from "react-redux";
 
 import "./Home.css"
+import Footer from '../../components/Footer/Footer';
 const Home = () => {
-let jobsState = useSelector((state) => state.jobs);
+let booksState = useSelector((state) => state.books);
  
-const { error, pending, data } = jobsState;
+const {  data } = booksState;
  
   return (
     <>
-    <div className="home">
-     {data&& (
-     <>
-     <Sidebar />
-     
-      <Container />
-      </>)}
-    </div>
+      <div className="home">
+        {data && (
+          <>
+            <Container />
+          </>
+        )}
+        <Footer />
+      </div>
     </>
   );
 }

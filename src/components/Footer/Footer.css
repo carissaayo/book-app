@@ -1,11 +1,22 @@
 .footer{
-    display: flex;
-    justify-content: space-between;
-    /* position: relative; */
-    /* bottom:-20px; */
-    margin-top: 60px;
-    margin-bottom: 40px;
-    color:#8692A6;
-    /* width:86.5% */
+    position: sticky;
+    bottom:10px;
+        display: flex;
+        justify-content: space-between;
+    right:30px;
+}
+
+
+.footer p{
+    /* width: max-content; */
+   color:#1D9BF0;
+  background-color:   #1d9cf030;
+  border-color:  #1D9BF0;
+  width: 150px;
+  padding: 20px ;
+ cursor: pointer;
+ outline: none;
+ border-radius: 10px;
+ z-index: 20;
 
 }

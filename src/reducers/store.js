@@ -1,8 +1,8 @@
 import { configureStore } from "@reduxjs/toolkit";
-import jobsReducer from "../context/jobsContext";
+import booksReducer from "../context/booksContext";
 
 export const store = configureStore({
   reducer: {
-    jobs: jobsReducer,
+    books: booksReducer,
   },
 });

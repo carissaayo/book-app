@@ -1,0 +1,45 @@
+.bookslist{
+    display: grid;
+    grid-template-columns: repeat(4,230px);     
+    gap: 50px; 
+}
+
+@media (max-width:1330px){
+    .bookslist{
+    column-gap: 30px;  
+}
+}
+
+@media (max-width:1150px){
+    .bookslist{
+  
+    grid-template-columns: 1fr 1fr 1fr ;
+    
+}
+
+}
+
+@media (max-width:930px){
+    .bookslist{
+  
+    grid-template-columns:  1fr 1fr ;
+    /* column-gap: 50px;   */
+}
+
+}
+
+@media (max-width:760px){
+    .bookslist{
+  
+    grid-template-columns:  1fr 1fr ;
+    /* column-gap: 30px;   */
+}
+
+}
+
+@media (max-width:560px){
+    .bookslist{
+    grid-template-columns:  1fr 
+}
+
+}

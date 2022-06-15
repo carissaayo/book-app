@@ -1,0 +1,129 @@
+.admin{
+    width: 100vw;
+    height: auto;
+    padding: 0px 15%;
+    padding-top: 60px;
+    overflow-x: hidden;
+    padding-bottom: 40px;
+}
+a{
+    text-decoration: none;
+    color:inherit
+}
+.admin__con{
+    display: flex;
+    justify-content: space-between;
+    max-width: 800px;
+    height: 80px;
+    align-items: center;
+    background-color: white;
+    padding: 10px;
+    padding-right: 15px;
+    margin-bottom: 10px;
+}
+.admin h2{
+    margin-bottom: 40px;
+}
+
+.add__book__con{
+    display: flex;
+    justify-content: space-between;
+    max-width: 800px;
+
+}
+button{
+     border-radius: 5px;
+ border: 1px solid;
+ padding: 4px;
+ cursor: pointer;
+ outline: none;
+}
+
+.add__book__con button{
+    height:40px;
+    color:#1D9BF0;
+  background-color:   #1d9cf030;
+  border-color:  #1D9BF0;
+ 
+}
+
+.admin__img__con img{
+    width:50px;
+ height: 50px;   
+}
+
+.admin__btn__con{
+    display: flex;
+    justify-content: space-between;
+    width: 150px;
+}
+.admin__btn__con button{
+ width: 60px;
+ 
+}
+
+.admin__btn__con button:first-child{
+  color:#1D9BF0;
+  background-color:   #1d9cf030;
+  border-color:  #1D9BF0;
+ 
+}
+
+.admin__btn__con button:last-child{
+  color:rgb(233, 83, 28);
+  background-color:   rgba(233, 83, 28, 0.355);
+  border-color:  rgb(233, 83, 28);
+ 
+}
+
+@media (max-width:740px){
+    .admin{
+    padding: 0px 10%;
+    padding-top: 60px;
+
+}
+
+    .admin__con{    
+    max-width: 900px;
+}
+}
+
+@media (max-width:600px){
+    .admin{
+    padding: 0px 6%;
+    padding-top: 60px;
+   
+}
+
+.admin__btn__con{
+    display: flex;
+    flex-direction: column;height: 60px;
+   justify-content: space-between;
+    width: 70px;
+}
+
+}
+ 
+@media (max-width:450px){
+
+.admin__con{
+    padding-right: 0px;
+  
+}
+
+.admin__title{
+    font-size: 0.8rem;
+}
+   
+.admin__price__con{
+   display: none;
+}
+.admin__btn__con{
+    font-size: 0.8rem;
+    width: 60px;
+}
+.admin__btn__con button{
+ width: 50px;
+ 
+}
+}
