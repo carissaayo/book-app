@@ -20,3 +20,8 @@
  z-index: 20;
 
 }
+
+@media (max-width:450px){
+footer p{font-size: 0.8rem;
+}
+}

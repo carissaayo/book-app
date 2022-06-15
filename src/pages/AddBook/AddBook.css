@@ -10,10 +10,10 @@
 }
 
 h2{
-    margin-bottom: 30px;
+    margin-bottom: 10px;
 }
 label{
-    font-size: 1.2rem;
+    /* font-size: 1.2rem; */
     margin-bottom: 10px;
     width:200px;
     display: block;
@@ -28,9 +28,6 @@ section{
 section div{
     margin: 10px;
     margin-bottom: 30px;
-}
-.image__con{
-
 }
 
 input,textarea{
@@ -61,4 +58,58 @@ button{
  width: 100px;
  height:40px
 
+}
+
+
+
+@media (max-width:740px){
+    .add__book{    
+        padding: 0px 5%;
+        padding-top: 60px;
+    }
+
+
+}
+
+@media (max-width:600px){
+  .add__book{    
+        padding: 0px 7%;
+        padding-top: 60px;
+    }
+    input,textarea{
+    width:400px;
+}
+textarea{
+    height:150px;
+}
+}
+ 
+@media (max-width:500px){
+
+ .add__book{    
+        padding: 0px 5%;
+        padding-top: 60px;
+    }
+    input,textarea{
+    width:350px;
+}
+}
+@media (max-width:430px){
+section{
+       /* background-color: white; */
+    /* max-width: 800px; */
+    padding: 10px;
+
+
+}
+ 
+    input,textarea{
+    width:300px;
+}
+.btn__con{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width:300px;
+}
 }
